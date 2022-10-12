@@ -14,9 +14,15 @@ public class MyClass {
         Casa casa2 = new Casa();
         Casa casa3 = new Casa();
         
-        casa1.corDaParede = "Branca";
-        casa2.corDaParede = "Azul";
+        casa1.setCorDaParede("Branca");
+        casa1.setNumeroDoEndereco(1500);
+        casa1.setNumeroDoEndereco(1600);
         
-        casa1.ligarLuzDaCozinha();
+        System.out.println("O número do endereço é "+ casa1.getNumeroDoEndereco());
+        
+        casa2.setCorDaParede("Azul");
+        
+        
+        casa1.abrirPortaoDaGaragem(8977);
     }
 }

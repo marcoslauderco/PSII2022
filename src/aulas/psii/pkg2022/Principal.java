@@ -22,6 +22,11 @@ public class Principal {
         
         boloDeChocolate.baterOBolo();
         
+        Pessoa marcos = new Pessoa();
+        marcos.bolo = boloDeChocolate;
+        
+        System.out.println("O Marcos tem o bolo de sabor "+ marcos.bolo.sabor);
+        
         Bolo boloDeMorango = new Bolo();
         boloDeMorango.sabor = "Morango 2";
         boloDeMorango.baterOBolo();

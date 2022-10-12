@@ -4,17 +4,35 @@
  */
 package aulas.psii.slides;
 
+import aulas.psii.pkg2022.Bolo;
+
 /**
  *
  * @author Lauder
  */
 public class Casa {
-    String corDaParede, portaDaFrente;
-    String materialDoTelhado = "cêramica";
-    int numeroDoEndereco;
+    private String corDaParede, portaDaFrente;
+    private String materialDoTelhado = "cêramica";
+    private int numeroDoEndereco;
+    private int codigoControle = 2355;
+
+    public Casa() {
+        Bolo novoBolo = new Bolo();
+    }
     
     public void abrirPortaoDaGaragem(int codigoControle){
-        System.out.println("Abrindo o portal com o código: "+codigoControle);
+        if(this.verificaCodigo(codigoControle)){
+            System.out.println("Portão foi aberto");
+        }else{
+            System.out.println("Portão não abriu");
+        }
+    }
+    
+    private boolean verificaCodigo(int codigoControle){
+        if(this.codigoControle == codigoControle){
+            return true;
+        }
+        return false;
     }
     
     public void ligarLuzDaCozinha(){
@@ -24,4 +42,40 @@ public class Casa {
     public String tocarCampainha(){
         return "din-don";
     }
+    
+    public void setNumeroDoEndereco(int numeroDoEndereco){
+        if(this.numeroDoEndereco == 0){
+            this.numeroDoEndereco = numeroDoEndereco;
+        }
+    }
+    
+    public int getNumeroDoEndereco(){
+        return this.numeroDoEndereco;
+    }
+
+    public String getCorDaParede() {
+        return corDaParede;
+    }
+
+    public void setCorDaParede(String corDaParede) {
+        this.corDaParede = corDaParede;
+    }
+
+    public String getPortaDaFrente() {
+        return portaDaFrente;
+    }
+
+    public void setPortaDaFrente(String portaDaFrente) {
+        this.portaDaFrente = portaDaFrente;
+    }
+
+    public String getMaterialDoTelhado() {
+        return materialDoTelhado;
+    }
+
+    public void setMaterialDoTelhado(String materialDoTelhado) {
+        this.materialDoTelhado = materialDoTelhado;
+    }
+    
+    
 }

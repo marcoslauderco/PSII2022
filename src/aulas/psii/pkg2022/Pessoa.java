@@ -8,12 +8,6 @@ package aulas.psii.pkg2022;
  *
  * @author Lauder
  */
-public class Bolo {
-    public String sabor;
-    public String formato;
-    public int tamanhoEmCm;
-    
-    public void baterOBolo(){
-        System.out.println("O bolo de sabor "+sabor+" está sendo batido");
-    }
+public class Pessoa {
+    public Bolo bolo;
 }
