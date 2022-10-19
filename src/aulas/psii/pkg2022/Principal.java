@@ -4,6 +4,8 @@
  */
 package aulas.psii.pkg2022;
 
+import aulas.psii.slides.Predio;
+
 /**
  *
  * @author Lauder
@@ -20,6 +22,8 @@ public class Principal {
         boloDeChocolate.formato = "quadrado";
         boloDeChocolate.tamanhoEmCm = 15;
         
+        Predio predio = new Predio();
+         
         boloDeChocolate.baterOBolo();
         
         Pessoa marcos = new Pessoa();

@@ -10,19 +10,27 @@ package aulas.psii.slides;
  */
 public class MyClass {
     public static void main(String[] args) {
-        Casa casa1 = new Casa();
-        Casa casa2 = new Casa();
-        Casa casa3 = new Casa();
-        
+        Casa casa1 = new Casa();        
         casa1.setCorDaParede("Branca");
-        casa1.setNumeroDoEndereco(1500);
         casa1.setNumeroDoEndereco(1600);
+        casa1.abrirPortaoDaGaragem(2355);
+        casa1.ligarLuzDaCozinha();
         
-        System.out.println("O número do endereço é "+ casa1.getNumeroDoEndereco());
+        System.out.println("Predio");
+        Predio predio = new Predio();
+        predio.setCorDaParede("Azul");
+        predio.setNumeroDoEndereco(255);
+        predio.abrirPortaoDaGaragem(2355);
+        predio.interfonar(105);
+        predio.abrirPortaoDosFundos(2355);
         
-        casa2.setCorDaParede("Azul");
+        System.out.println("Mansao");
+        Mansao mansaoDoProfessor = new Mansao();
+        mansaoDoProfessor.setCorDaParede("Vermelho");
+        mansaoDoProfessor.setNumeroDoEndereco(899);
+        mansaoDoProfessor.abrirPortaoDaGaragem(2355);
+        mansaoDoProfessor.ligarLuzDaCozinha();
         
-        
-        casa1.abrirPortaoDaGaragem(8977);
+     
     }
 }

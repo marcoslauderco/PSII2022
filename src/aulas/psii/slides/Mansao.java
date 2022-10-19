@@ -4,21 +4,10 @@
  */
 package aulas.psii.slides;
 
-import aulas.psii.pkg2022.Bolo;
-
 /**
  *
  * @author Lauder
  */
-public class Casa extends Moradia{
-    
-    public void ligarLuzDaCozinha(){
-        System.out.println("Luz da Cozinha ligada!");
-    }
-    
-    public String tocarCampainha(){
-        return "din-don";
-    }
-       
+public class Mansao extends Casa{
     
 }
