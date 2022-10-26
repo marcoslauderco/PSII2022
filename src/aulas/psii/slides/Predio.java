@@ -10,6 +10,23 @@ package aulas.psii.slides;
  */
 public class Predio extends Moradia{
     private int numeroDeApartamentos;
+    private String nomeDoPredio;
+    
+    public String getEnderecoCompleto(){
+        return super.getEnderecoCompleto()
+                + " - "
+                + this.getNomeDoPredio();
+    }
+
+    public String getNomeDoPredio() {
+        return nomeDoPredio;
+    }
+
+    public void setNomeDoPredio(String nomeDoPredio) {
+        this.nomeDoPredio = nomeDoPredio;
+    }
+    
+    
     
     public void interfonar(int numeroDoPartamento){
         System.out.println("Você interfonou para o ap: "+numeroDoPartamento);

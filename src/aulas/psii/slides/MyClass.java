@@ -13,24 +13,24 @@ public class MyClass {
         Casa casa1 = new Casa();        
         casa1.setCorDaParede("Branca");
         casa1.setNumeroDoEndereco(1600);
-        casa1.abrirPortaoDaGaragem(2355);
-        casa1.ligarLuzDaCozinha();
+        casa1.setLogradouro("aV. prof MARCOS");
+        //imprimeEndereco("O endereço da Casa é ", casa1);;
+        casa1.imprimirEnderecoCompleto("O endereço da casa é ");
         
         System.out.println("Predio");
         Predio predio = new Predio();
         predio.setCorDaParede("Azul");
         predio.setNumeroDoEndereco(255);
-        predio.abrirPortaoDaGaragem(2355);
-        predio.interfonar(105);
-        predio.abrirPortaoDosFundos(2355);
-        
-        System.out.println("Mansao");
-        Mansao mansaoDoProfessor = new Mansao();
-        mansaoDoProfessor.setCorDaParede("Vermelho");
-        mansaoDoProfessor.setNumeroDoEndereco(899);
-        mansaoDoProfessor.abrirPortaoDaGaragem(2355);
-        mansaoDoProfessor.ligarLuzDaCozinha();
-        
+        predio.setLogradouro("R. Paulista");
+        predio.setNomeDoPredio("Edificio Unicesumar");
+        //imprimeEndereco("O endereço do Prédio é ", predio);
+        predio.imprimirEnderecoCompleto("", "do Prédio");
      
+    }
+    
+    public static void imprimeEndereco(String prefixo,
+            Moradia moradia){
+        System.out.println(prefixo
+                + moradia.getEnderecoCompleto());
     }
 }
