@@ -16,6 +16,13 @@ public class Moradia {
     protected int numeroDoEndereco;
     protected int codigoControle = 2355;
     protected String logradouro;
+
+    public Moradia() {
+    }
+    
+    public Moradia(int codigoControle){
+        this.codigoControle = codigoControle;
+    }
     
     public void imprimirEnderecoCompleto(){
         this.imprimirEnderecoCompleto("");
@@ -56,22 +63,14 @@ public class Moradia {
 
     public void setLogradouro(String logradouro) {
         Validacao validacao = new Validacao();
+        Util util = new Util();
+                
         if(validacao.enderecoValido(logradouro)){
             if(logradouro.toUpperCase().startsWith("AV.")){
                 logradouro = logradouro.toLowerCase().replace("av. ", 
                         "Avenida ");
-                String[] partes = logradouro.split(" ");
-                String logradouroCamelCase = "";
-                for (String item : partes) {
-                    String primeiraLetra = Character.toString(item.charAt(0));
-                    String restante = item.replaceFirst(primeiraLetra, "");
-                    logradouroCamelCase = logradouroCamelCase
-                            .concat(primeiraLetra.toUpperCase())
-                            .concat(restante).concat(" ");
-                }
-                logradouro = logradouroCamelCase;
             }
-            this.logradouro = logradouro;
+            this.logradouro = util.paraCamelCase(logradouro);;
         }else{
             System.out.println("Endereço inválido!");
         }
@@ -125,6 +124,21 @@ public class Moradia {
 
     public void setNumeroDoEndereco(int numeroDoEndereco) {
         this.numeroDoEndereco = numeroDoEndereco;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Moradia outro = (Moradia) obj;
+        if(this.getLogradouro().equals(outro.getLogradouro())
+                && this.getNumeroDoEndereco() == outro.getNumeroDoEndereco()
+                ){
+            return true;
+        }
+        return false; //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String toString() {
+        return "A cor da parede da moradia é: "+this.getCorDaParede();
     }
     
     

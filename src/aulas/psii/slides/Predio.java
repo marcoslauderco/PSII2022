@@ -11,6 +11,15 @@ package aulas.psii.slides;
 public class Predio extends Moradia{
     private int numeroDeApartamentos;
     private String nomeDoPredio;
+
+    public Predio() {
+        super();
+    }
+
+    public Predio(int numeroDeApartamentos, String nomeDoPredio) {
+        this.numeroDeApartamentos = numeroDeApartamentos;
+        this.nomeDoPredio = nomeDoPredio;
+    } 
     
     public String getEnderecoCompleto(){
         return super.getEnderecoCompleto()
@@ -23,7 +32,8 @@ public class Predio extends Moradia{
     }
 
     public void setNomeDoPredio(String nomeDoPredio) {
-        this.nomeDoPredio = nomeDoPredio;
+        Util util = new Util();
+        this.nomeDoPredio = util.paraCamelCase(nomeDoPredio);
     }
     
     

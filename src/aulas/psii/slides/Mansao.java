@@ -8,6 +8,6 @@ package aulas.psii.slides;
  *
  * @author Lauder
  */
-public class Mansao extends Casa{
+public class Mansao extends Moradia{
     
 }

@@ -10,21 +10,50 @@ package aulas.psii.slides;
  */
 public class MyClass {
     public static void main(String[] args) {
-        Casa casa1 = new Casa();        
-        casa1.setCorDaParede("Branca");
-        casa1.setNumeroDoEndereco(1600);
-        casa1.setLogradouro("aV. prof MARCOS");
-        //imprimeEndereco("O endereço da Casa é ", casa1);;
-        casa1.imprimirEnderecoCompleto("O endereço da casa é ");
+        
+        int valorA = 1;
+        int valorB = 1;
+        
+        if(valorA == valorB){
+            System.out.println("Os valores são iguais");
+        }
+        
+        Casa casa1 = new Casa("Branca","aV. prof MARCOS",1600); 
+        casa1.setTipoDeConstrucao(TipoDeConstrucao.ALVENARIA);
+        System.out.println(casa1);
+        casa1.imprimirEnderecoCompleto("Casa 1:");
+        System.out.println("A casa foi construida com: " 
+                + casa1.getTipoDeConstrucao());
+
+        
+        Casa casa2 = new Casa();        
+        casa2.setCorDaParede("Branca");
+        casa2.setNumeroDoEndereco(1600);
+        casa2.setLogradouro("aV. prof MARCOS");
+        casa2.setTipoDeConstrucao(TipoDeConstrucao.STEEL_FRAME);
+        System.out.println(casa2.toString());
+        casa2.imprimirEnderecoCompleto("Casa 2:");
+        System.out.println("A casa foi construida com: " 
+                + casa2.getTipoDeConstrucao().getLabel());
+        
+        if(casa1.equals(casa2)){
+            System.out.println("As casas são iguais");
+        }else{
+            System.out.println("As casas são diferentes");
+        }
         
         System.out.println("Predio");
         Predio predio = new Predio();
         predio.setCorDaParede("Azul");
         predio.setNumeroDoEndereco(255);
-        predio.setLogradouro("R. Paulista");
-        predio.setNomeDoPredio("Edificio Unicesumar");
+        predio.setLogradouro("R. paulista");
+        predio.setNomeDoPredio("edificio UNIcesumar");
         //imprimeEndereco("O endereço do Prédio é ", predio);
         predio.imprimirEnderecoCompleto("", "do Prédio");
+        
+        casa1.abrirPortaoDaGaragem(2353);
+        casa2.abrirPortaoDaGaragem(2354);
+        predio.abrirPortaoDaGaragem(2355);
      
     }
     
