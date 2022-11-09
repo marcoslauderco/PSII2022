@@ -10,7 +10,7 @@ import aulas.psii.pkg2022.Bolo;
  *
  * @author Lauder
  */
-public class Moradia {
+public abstract class Moradia {
     protected String corDaParede, portaDaFrente;
     protected String materialDoTelhado = "cêramica";
     protected int numeroDoEndereco;

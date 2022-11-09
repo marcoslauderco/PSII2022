@@ -5,6 +5,11 @@
 package aulas.psii.pkg2022;
 
 import aulas.psii.slides.Predio;
+import java.io.IOException;
+import java.util.Date;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -16,24 +21,23 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Olá Mundo!");
-        Bolo boloDeChocolate = new Bolo();
-        boloDeChocolate.sabor = new String("Chocolate Meio-Amargo");
-        boloDeChocolate.formato = "quadrado";
-        boloDeChocolate.tamanhoEmCm = 15;
+        Bolo bolo = new Bolo();
+        bolo.sabor = "chocolate";
         
-        Predio predio = new Predio();
-         
-        boloDeChocolate.baterOBolo();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Infome a data de Fabricação");
+        String fabricacao = scan.nextLine();
         
-        Pessoa marcos = new Pessoa();
-        marcos.bolo = boloDeChocolate;
         
-        System.out.println("O Marcos tem o bolo de sabor "+ marcos.bolo.sabor);
-        
-        Bolo boloDeMorango = new Bolo();
-        boloDeMorango.sabor = "Morango 2";
-        boloDeMorango.baterOBolo();
+        bolo.setDataDeFabricacao(fabricacao);
+        System.out.println("O bolo foi fabricado em: "+
+                bolo.getDataDeFabricacaoFormatada());
+        System.out.println("O bolo vence em: "+
+                bolo.getDataDeValidadeFormatada());
+    }
+    
+    public static void trocaValor(Bolo parametro){
+        parametro.sabor = "Morango";
     }
     
 }

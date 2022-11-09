@@ -10,7 +10,6 @@ package aulas.psii.slides;
  */
 public class MyClass {
     public static void main(String[] args) {
-        
         int valorA = 1;
         int valorB = 1;
         
