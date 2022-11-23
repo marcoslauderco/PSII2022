@@ -4,6 +4,9 @@
  */
 package aulas.psii.slides;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Lauder
@@ -12,6 +15,8 @@ public class MyClass {
     public static void main(String[] args) {
         int valorA = 1;
         int valorB = 1;
+        
+        List<Casa> casas = new ArrayList<>();
         
         if(valorA == valorB){
             System.out.println("Os valores são iguais");
@@ -23,7 +28,9 @@ public class MyClass {
         casa1.imprimirEnderecoCompleto("Casa 1:");
         System.out.println("A casa foi construida com: " 
                 + casa1.getTipoDeConstrucao());
-
+        
+        casas.add(casa1);
+        casas.add(new Casa());
         
         Casa casa2 = new Casa();        
         casa2.setCorDaParede("Branca");
@@ -53,6 +60,11 @@ public class MyClass {
         casa1.abrirPortaoDaGaragem(2353);
         casa2.abrirPortaoDaGaragem(2354);
         predio.abrirPortaoDaGaragem(2355);
+        
+        casa1.receberCarta();
+        predio.receberCarta();
+        
+        Casa.metodoEstaticoTeste();
      
     }
     

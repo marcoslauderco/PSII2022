@@ -9,5 +9,9 @@ package aulas.psii.slides;
  * @author Lauder
  */
 public class Mansao extends Moradia{
+
+    public void receberCarta() {
+        System.out.println("A carta foi enviada para uma caixa postal");
+    }
     
 }

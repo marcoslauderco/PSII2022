@@ -8,13 +8,13 @@ package aulas.psii.slides;
  *
  * @author Lauder
  */
-public class Util{
+public abstract class Util{
 
-    public String paraCamelCase(String texto) {
+    public static String paraCamelCase(String texto) {
         texto = texto.toLowerCase();
         String[] partes = texto.split(" ");
         String camelCase = "";
-        //for (int i = 0; i < partes.length; i++){
+        //for (int i = 0; i < partes.length; i++){;;
         //String parte = partes[i]; 
         for (String parte : partes) {
             char primeiraLetra = parte.charAt(0);

@@ -11,6 +11,10 @@ package aulas.psii.slides;
 public class Predio extends Moradia{
     private int numeroDeApartamentos;
     private String nomeDoPredio;
+    
+    public void receberCarta() {
+        System.out.println("A carta foi recebida pelo porteiro.");
+    }
 
     public Predio() {
         super();
@@ -32,8 +36,7 @@ public class Predio extends Moradia{
     }
 
     public void setNomeDoPredio(String nomeDoPredio) {
-        Util util = new Util();
-        this.nomeDoPredio = util.paraCamelCase(nomeDoPredio);
+        this.nomeDoPredio = Util.paraCamelCase(nomeDoPredio);
     }
     
     

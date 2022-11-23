@@ -16,6 +16,8 @@ public abstract class Moradia {
     protected int numeroDoEndereco;
     protected int codigoControle = 2355;
     protected String logradouro;
+    
+    public abstract void receberCarta();
 
     public Moradia() {
     }
@@ -63,14 +65,13 @@ public abstract class Moradia {
 
     public void setLogradouro(String logradouro) {
         Validacao validacao = new Validacao();
-        Util util = new Util();
                 
         if(validacao.enderecoValido(logradouro)){
             if(logradouro.toUpperCase().startsWith("AV.")){
                 logradouro = logradouro.toLowerCase().replace("av. ", 
                         "Avenida ");
             }
-            this.logradouro = util.paraCamelCase(logradouro);;
+            this.logradouro = Util.paraCamelCase(logradouro);
         }else{
             System.out.println("Endereço inválido!");
         }

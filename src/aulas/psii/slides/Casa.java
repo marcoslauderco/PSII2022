@@ -13,6 +13,7 @@ import aulas.psii.pkg2022.Bolo;
 public class Casa extends Moradia {
 
     private TipoDeConstrucao tipoDeConstrucao;
+    private static String nomeDoProfessor = "Marcos";
 
     public Casa() {
         super(2354);
@@ -41,4 +42,13 @@ public class Casa extends Moradia {
         this.tipoDeConstrucao = tipoDeConstrucao;
     }
 
+    @Override
+    public void receberCarta() {
+        System.out.println("A carta foi recebida por caixa de correio.");
+    }
+    
+    public static void metodoEstaticoTeste(){
+        System.out.println(nomeDoProfessor);
+    }
+    
 }
